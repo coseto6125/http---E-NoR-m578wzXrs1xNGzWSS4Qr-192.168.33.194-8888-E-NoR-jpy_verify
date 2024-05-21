@@ -1,0 +1,75 @@
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+select = ["ALL"]
+ignore = [
+    "ANN001", # function 缺少type hint標示
+    "ANN002", # function args 標示申告
+    "ANN003", # function kwawg 標示申告
+    "ANN101", # 缺少申告self(pytest不需要)
+    "ANN201", # 公用functon 缺少 return type hint標示
+    "ANN202", # 私有functon 缺少 return type hint標示
+    "ANN204", # __init__ 缺少 return type hint標示
+    "ANN205", # static functon 缺少 return type hint標示
+    "ARG002", # function args 未使用
+    "PLW2901", # for 迴圈下覆蓋了變數
+    "B905", #zip struct need
+    "C901", # code 太複雜
+    "COM812", # function最後一個參數帶逗號
+    "D100",
+    "D101",
+    "D102",
+    "D107",   # 缺少註解
+    "D200", #單行註解提示
+    "D407",
+    "D410",
+    "D212", #註解優化
+    "D413", #註解優化
+    "DTZ005",
+    "DTZ006", # timezone
+    "E501", # 字數太長轉換
+    "EM101", # raise 應該賦予變數
+    "EM102", # 提示異常訊息中有使用f-string
+    "ERA001", # 程式碼被注解
+    "N802", #funciton Name大小寫
+    "F811",
+    "F841",
+    "FBT001", # 提示function 設定預設參數為 boolen
+    "FBT002", # 提示function 設定預設參數為 boolen
+    "FBT003", # 提示function有直接引用 boolen
+    "FIX002", # 提示todo
+    "G004", # 取消logger使用參數的提示
+    "INP001", # ignore missing __init__.py
+    "N801", #class not pep8
+    "N806",
+    "PLR0911", # code 太複雜
+    "PLR0912", # code 太複雜
+    "PLR0913",
+    "PLR0915", # code 太複雜
+    "PLR2004", # var代替數字
+    "PT013", # import replace from import
+    "PTH123",
+    "RUF001", # 全型冒號轉半型提示
+    "RUF002", # 全型逗號轉半型提示
+    "RUF003", # 全型逗號轉半型提示
+    "RUF018", # 提示assert中有使用:=賦值
+    "S101", # 提示有使用assert
+    "S324", # 提示用sha256取代md5 (server要求，因此不可變)
+    "SLF001", # 訪問 _ 私有變數
+    "T201",   # 抓出 print 位置
+    "D103",   # 缺少註解在公用function
+    "D205",   # 註解加blank
+    "D400",   # 註解第一行結尾要有句號
+    "D415",   # 註解最後一行結尾要有句號或標記…等
+    "D417",   # 註解缺乏描述
+    "TD002", # 提示todo
+    "TD003", # 提示todo
+    "TRY003",
+    "UP035",
+    "W292", # 最後要空行？
+    "W293", # pyink fomart 會處理，忽略
+    "TRY300", # if如果有return 需要 else
+]
